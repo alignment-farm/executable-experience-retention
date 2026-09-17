@@ -1,0 +1,44 @@
+[
+  {
+    "name": "acquisition-0",
+    "transport_attempts": 2,
+    "unknown_usage_attempts": 2,
+    "wall_seconds": 360.07962300000054
+  },
+  {
+    "completion_tokens": 848,
+    "name": "acquisition-compact-0",
+    "prompt_tokens": 6467,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7315,
+    "transport_attempts": 1,
+    "unknown_usage_attempts": 0,
+    "wall_seconds": 81.2238740419998
+  },
+  {
+    "completion_tokens": 618,
+    "name": "lesson-construction",
+    "prompt_tokens": 7326,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7944,
+    "transport_attempts": 1,
+    "unknown_usage_attempts": 0,
+    "wall_seconds": 73.73487695800031
+  },
+  {
+    "completion_tokens": 632,
+    "name": "lesson-repair",
+    "prompt_tokens": 1086,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1718,
+    "transport_attempts": 1,
+    "unknown_usage_attempts": 0,
+    "wall_seconds": 40.096485834000305
+  }
+]

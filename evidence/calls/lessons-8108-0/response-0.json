@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```python\ndef solve(api, request):\n    customers = set(request.get(\"customers\", []))\n    cutoff = request.get(\"cutoff\", \"\")\n    \n    # Fetch all invoices\n    invoices = []\n    cursor = None\n    while True:\n        page = api.page(\"invoices\", cursor)\n        invoices.extend(page[\"items\"])\n        cursor = page.get(\"next_cursor\")\n        if cursor is None:\n            break\n    \n    # Fetch all events\n    events = []\n    cursor = None\n    while True:\n        page = api.page(\"events\", cursor)\n        events.extend(page[\"items\"])\n        cursor = page.get(\"next_cursor\")\n        if cursor is None:\n            break\n    \n    # Deduplicate events: for each event ID, keep the one with highest revision\n    # If multiple have same highest revision, they are identical; keep one\n    best_by_id = {}\n    for ev in events:\n        eid = ev[\"id\"]\n        rev = ev[\"revision\"]\n        if eid not in best_by_id:\n            best_by_id[eid] = ev\n        else:\n            existing = best_by_id[eid]\n            if rev > existing[\"revision\"]:\n                best_by_id[eid] = ev\n            # If rev == existing[\"revision\"], they are identical duplicates; keep existing\n    \n    deduped_events = list(best_by_id.values())\n    \n    # Filter events: status == \"posted\" and date <= cutoff\n    filtered_events = []\n    for ev in deduped_events:\n        if ev[\"status\"] == \"posted\" and ev[\"date\"] <= cutoff:\n            filtered_events.append(ev)\n    \n    # Build set of valid invoice IDs\n    invoice_ids = set(inv[\"id\"] for inv in invoices)\n    \n    # Filter events to only those referencing existing invoices\n    valid_events = [ev for ev in filtered_events if ev[\"invoice_id\"] in invoice_ids]\n    \n    # Select invoices: status == \"open\", customer in customers, due <= cutoff\n    selected_invoices = []\n    for inv in invoices:\n        if inv[\"status\"] == \"open\" and inv[\"customer\"] in customers and inv[\"due\"] <= cutoff:\n            selected_invoices.append(inv)\n    \n    # Helper to convert decimal string to integer cents\n    def to_cents(amount_str):\n        # amount_str is like \"123.45\"\n        if \".\" in amount_str:\n            whole, frac = amount_str.split(\".\")\n            # Ensure frac is exactly 2 digits\n            frac = frac[:2].ljust(2, \"0\")\n            return int(whole) * 100 + int(frac)\n        else:\n            return int(amount_str) * 100\n    \n    # Calculate balances\n    rows = []\n    for inv in selected_invoices:\n        inv_id = inv[\"id\"]\n        inv_currency = inv[\"currency\"]\n        balance = to_cents(inv[\"amount\"])\n        \n        for ev in valid_events:\n            if ev[\"invoice_id\"] != inv_id:\n                continue\n            if ev[\"currency\"] != inv_currency:\n                continue\n            ev_cents = to_cents(ev[\"amount\"])\n            if ev[\"kind\"] == \"payment\":\n                balance -= ev_cents\n            elif ev[\"kind\"] == \"refund\":\n                balance += ev_cents\n        \n        # Clamp to zero\n        if balance < 0:\n            balance = 0\n        \n        # Include only if positive\n        if balance > 0:\n            rows.append({\n                \"invoice_id\": inv_id,\n                \"customer\": inv[\"customer\"],\n                \"currency\": inv_currency,\n                \"outstanding_cents\": balance\n            })\n    \n    # Sort rows by (customer, currency, invoice_id)\n    rows.sort(key=lambda r: (r[\"customer\"], r[\"currency\"], r[\"invoice_id\"]))\n    \n    # Calculate totals\n    totals = {}\n    for row in rows:\n        cur = row[\"currency\"]\n        totals[cur] = totals.get(cur, 0) + row[\"outstanding_cents\"]\n    \n    return {\"rows\": rows, \"totals\": totals}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789649399,
+  "id": "chatcmpl-asdcjk891TC2XglJuMsEsiZkUgw50Klx",
+  "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+  "object": "chat.completion",
+  "system_fingerprint": "b1-72874f5",
+  "timings": {
+    "cache_n": 38,
+    "predicted_ms": 51783.985,
+    "predicted_n": 911,
+    "predicted_per_second": 17.59231159981218,
+    "predicted_per_token_ms": 56.84301317233809,
+    "prompt_ms": 38572.693,
+    "prompt_n": 7110,
+    "prompt_per_second": 184.32729081166306,
+    "prompt_per_token_ms": 5.425132630098453
+  },
+  "usage": {
+    "completion_tokens": 911,
+    "prompt_tokens": 7148,
+    "prompt_tokens_details": {
+      "cached_tokens": 38
+    },
+    "total_tokens": 8059
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "container_wall_seconds": 0.2629923750009766,
+  "results": [
+    {
+      "api_calls": [
+        {
+          "cursor": null,
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:1",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:2",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:3",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": null,
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:1",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:2",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:3",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:4",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:5",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:6",
+          "items": 1,
+          "resource": "events"
+        }
+      ],
+      "output": {
+        "rows": [
+          {
+            "currency": "GBP",
+            "customer": "alfa",
+            "invoice_id": "i002",
+            "outstanding_cents": 13234
+          },
+          {
+            "currency": "USD",
+            "customer": "alfa",
+            "invoice_id": "edge",
+            "outstanding_cents": 30
+          },
+          {
+            "currency": "USD",
+            "customer": "gamma",
+            "invoice_id": "i000",
+            "outstanding_cents": 17669
+          }
+        ],
+        "totals": {
+          "GBP": 13234,
+          "USD": 17699
+        }
+      },
+      "seconds": 0.00010399999996479892
+    },
+    {
+      "api_calls": [
+        {
+          "cursor": null,
+          "items": 5,
+          "resource": "invoices"
+        },
+        {
+          "cursor": null,
+          "items": 7,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:7",
+          "items": 7,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:14",
+          "items": 7,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:21",
+          "items": 7,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:28",
+          "items": 2,
+          "resource": "events"
+        }
+      ],
+      "output": {
+        "rows": [
+          {
+            "currency": "USD",
+            "customer": "alfa",
+            "invoice_id": "edge",
+            "outstanding_cents": 30
+          }
+        ],
+        "totals": {
+          "USD": 30
+        }
+      },
+      "seconds": 0.00010841599998911988
+    },
+    {
+      "api_calls": [
+        {
+          "cursor": null,
+          "items": 0,
+          "resource": "invoices"
+        },
+        {
+          "cursor": null,
+          "items": 0,
+          "resource": "events"
+        }
+      ],
+      "output": {
+        "rows": [],
+        "totals": {}
+      },
+      "seconds": 9.291999958804809e-06
+    },
+    {
+      "api_calls": [
+        {
+          "cursor": null,
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:1",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:2",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:3",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:4",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:5",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": null,
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:1",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:2",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:3",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:4",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:5",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:6",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:7",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:8",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:9",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:10",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:11",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:12",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:13",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:14",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:15",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:16",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:17",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:18",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:19",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:20",
+          "items": 1,
+          "resource": "events"
+        }
+      ],
+      "output": {
+        "rows": [
+          {
+            "currency": "USD",
+            "customer": "alfa",
+            "invoice_id": "edge",
+            "outstanding_cents": 30
+          },
+          {
+            "currency": "USD",
+            "customer": "alfa",
+            "invoice_id": "i000",
+            "outstanding_cents": 7458
+          },
+          {
+            "currency": "USD",
+            "customer": "gamma",
+            "invoice_id": "i001",
+            "outstanding_cents": 547
+          }
+        ],
+        "totals": {
+          "USD": 8035
+        }
+      },
+      "seconds": 0.00014762500001097578
+    },
+    {
+      "api_calls": [
+        {
+          "cursor": null,
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:1",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": "invoices:2",
+          "items": 1,
+          "resource": "invoices"
+        },
+        {
+          "cursor": null,
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:1",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:2",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:3",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:4",
+          "items": 1,
+          "resource": "events"
+        },
+        {
+          "cursor": "events:5",
+          "items": 1,
+          "resource": "events"
+        }
+      ],
+      "output": {
+        "rows": [
+          {
+            "currency": "USD",
+            "customer": "alfa",
+            "invoice_id": "edge",
+            "outstanding_cents": 30
+          },
+          {
+            "currency": "GBP",
+            "customer": "beta",
+            "invoice_id": "i001",
+            "outstanding_cents": 18693
+          }
+        ],
+        "totals": {
+          "GBP": 18693,
+          "USD": 30
+        }
+      },
+      "seconds": 5.1583000015398284e-05
+    }
+  ],
+  "returncode": 0,
+  "stderr": ""
+}

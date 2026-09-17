@@ -1,0 +1,245 @@
+{
+  "arms": {
+    "archive": {
+      "cached_tokens": 0,
+      "candidate_check_api_calls": 0,
+      "candidate_check_batches": 0,
+      "candidate_check_wall_seconds": 0,
+      "completion_tokens": 0,
+      "current_api_calls": 258,
+      "execution_api_calls": 698,
+      "model_calls": 0,
+      "model_wall_seconds": 0,
+      "prompt_tokens": 0,
+      "requests": 8,
+      "successes": 8,
+      "transport_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 1.9252964580009575
+    },
+    "cache": {
+      "cached_tokens": 38,
+      "candidate_check_api_calls": 55,
+      "candidate_check_batches": 1,
+      "candidate_check_wall_seconds": 0.2933476670004893,
+      "completion_tokens": 795,
+      "current_api_calls": 258,
+      "execution_api_calls": 643,
+      "model_calls": 1,
+      "model_wall_seconds": 84.62015183299991,
+      "prompt_tokens": 7150,
+      "requests": 8,
+      "successes": 8,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 86.87081675099944
+    },
+    "lessons": {
+      "cached_tokens": 304,
+      "candidate_check_api_calls": 440,
+      "candidate_check_batches": 8,
+      "candidate_check_wall_seconds": 2.141355334000764,
+      "completion_tokens": 6476,
+      "current_api_calls": 258,
+      "execution_api_calls": 258,
+      "model_calls": 8,
+      "model_wall_seconds": 663.8905123740024,
+      "prompt_tokens": 57216,
+      "requests": 8,
+      "successes": 8,
+      "transport_attempts": 8,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 668.0838581230018
+    },
+    "ready": {
+      "cached_tokens": 0,
+      "candidate_check_api_calls": 0,
+      "candidate_check_batches": 0,
+      "candidate_check_wall_seconds": 0,
+      "completion_tokens": 0,
+      "current_api_calls": 258,
+      "execution_api_calls": 698,
+      "model_calls": 0,
+      "model_wall_seconds": 0,
+      "prompt_tokens": 0,
+      "requests": 8,
+      "successes": 8,
+      "transport_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 1.9091443759989488
+    }
+  },
+  "calls": [
+    {
+      "name": "acquisition-0",
+      "transport_attempts": 2,
+      "unknown_usage_attempts": 2,
+      "wall_seconds": 360.07962300000054
+    },
+    {
+      "completion_tokens": 848,
+      "name": "acquisition-compact-0",
+      "prompt_tokens": 6467,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 7315,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.2238740419998
+    },
+    {
+      "completion_tokens": 795,
+      "name": "cache-8101-0",
+      "prompt_tokens": 7150,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7945,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 84.62015183299991
+    },
+    {
+      "completion_tokens": 618,
+      "name": "lesson-construction",
+      "prompt_tokens": 7326,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 7944,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 73.73487695800031
+    },
+    {
+      "completion_tokens": 632,
+      "name": "lesson-repair",
+      "prompt_tokens": 1086,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 1718,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 40.096485834000305
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8101-0",
+      "prompt_tokens": 7150,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7945,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.99330337500032
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8102-0",
+      "prompt_tokens": 7153,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7948,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.9254030409993
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8103-0",
+      "prompt_tokens": 7156,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7951,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.94490883300023
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8104-0",
+      "prompt_tokens": 7150,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7945,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.91584679100015
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8105-0",
+      "prompt_tokens": 7153,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7948,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.8856952920014
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8106-0",
+      "prompt_tokens": 7156,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7951,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.87468483299926
+    },
+    {
+      "completion_tokens": 795,
+      "name": "lessons-8107-0",
+      "prompt_tokens": 7150,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 7945,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 81.93749420900167
+    },
+    {
+      "completion_tokens": 911,
+      "name": "lessons-8108-0",
+      "prompt_tokens": 7148,
+      "prompt_tokens_details": {
+        "cached_tokens": 38
+      },
+      "total_tokens": 8059,
+      "transport_attempts": 1,
+      "unknown_usage_attempts": 0,
+      "wall_seconds": 90.41317600000002
+    }
+  ],
+  "research_model_total": {
+    "cached_tokens": 342,
+    "completion_tokens": 9369,
+    "model_calls": 13,
+    "model_wall_seconds": 1303.6455240410032,
+    "prompt_tokens": 79245,
+    "transport_attempts": 14,
+    "unknown_usage_attempts": 2
+  },
+  "setup": {
+    "cached_tokens": 0,
+    "candidate_check_api_calls": 55,
+    "candidate_check_batches": 1,
+    "candidate_check_wall_seconds": 0.2573074580004686,
+    "completion_tokens": 2098,
+    "model_calls": 4,
+    "model_wall_seconds": 555.134859834001,
+    "prompt_tokens": 14879,
+    "transport_attempts": 5,
+    "unknown_usage_attempts": 2
+  }
+}

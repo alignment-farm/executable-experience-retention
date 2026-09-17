@@ -1,0 +1,385 @@
+[
+  {
+    "rows": [
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "edge",
+        "outstanding_cents": 30
+      }
+    ],
+    "totals": {
+      "USD": 30
+    }
+  },
+  {
+    "rows": [
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i002",
+        "outstanding_cents": 4649
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "edge",
+        "outstanding_cents": 30
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i005",
+        "outstanding_cents": 13369
+      },
+      {
+        "currency": "GBP",
+        "customer": "beta",
+        "invoice_id": "i014",
+        "outstanding_cents": 3916
+      }
+    ],
+    "totals": {
+      "EUR": 4649,
+      "GBP": 3916,
+      "USD": 13399
+    }
+  },
+  {
+    "rows": [
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i018",
+        "outstanding_cents": 6136
+      },
+      {
+        "currency": "GBP",
+        "customer": "alfa",
+        "invoice_id": "i004",
+        "outstanding_cents": 17601
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "edge",
+        "outstanding_cents": 30
+      },
+      {
+        "currency": "EUR",
+        "customer": "beta",
+        "invoice_id": "i008",
+        "outstanding_cents": 5205
+      },
+      {
+        "currency": "EUR",
+        "customer": "beta",
+        "invoice_id": "i012",
+        "outstanding_cents": 3915
+      },
+      {
+        "currency": "EUR",
+        "customer": "beta",
+        "invoice_id": "i022",
+        "outstanding_cents": 19241
+      },
+      {
+        "currency": "EUR",
+        "customer": "beta",
+        "invoice_id": "i030",
+        "outstanding_cents": 3980
+      },
+      {
+        "currency": "GBP",
+        "customer": "beta",
+        "invoice_id": "i017",
+        "outstanding_cents": 16177
+      },
+      {
+        "currency": "GBP",
+        "customer": "beta",
+        "invoice_id": "i020",
+        "outstanding_cents": 5041
+      },
+      {
+        "currency": "GBP",
+        "customer": "beta",
+        "invoice_id": "i023",
+        "outstanding_cents": 28354
+      },
+      {
+        "currency": "USD",
+        "customer": "beta",
+        "invoice_id": "i015",
+        "outstanding_cents": 13069
+      },
+      {
+        "currency": "USD",
+        "customer": "beta",
+        "invoice_id": "i024",
+        "outstanding_cents": 4846
+      },
+      {
+        "currency": "USD",
+        "customer": "beta",
+        "invoice_id": "i025",
+        "outstanding_cents": 18322
+      },
+      {
+        "currency": "USD",
+        "customer": "beta",
+        "invoice_id": "i027",
+        "outstanding_cents": 2603
+      },
+      {
+        "currency": "EUR",
+        "customer": "gamma",
+        "invoice_id": "i011",
+        "outstanding_cents": 7160
+      },
+      {
+        "currency": "EUR",
+        "customer": "gamma",
+        "invoice_id": "i029",
+        "outstanding_cents": 6993
+      },
+      {
+        "currency": "GBP",
+        "customer": "gamma",
+        "invoice_id": "i000",
+        "outstanding_cents": 44059
+      },
+      {
+        "currency": "GBP",
+        "customer": "gamma",
+        "invoice_id": "i006",
+        "outstanding_cents": 1586
+      },
+      {
+        "currency": "USD",
+        "customer": "gamma",
+        "invoice_id": "i007",
+        "outstanding_cents": 14154
+      },
+      {
+        "currency": "USD",
+        "customer": "gamma",
+        "invoice_id": "i013",
+        "outstanding_cents": 11368
+      },
+      {
+        "currency": "USD",
+        "customer": "gamma",
+        "invoice_id": "i019",
+        "outstanding_cents": 12132
+      }
+    ],
+    "totals": {
+      "EUR": 52630,
+      "GBP": 112818,
+      "USD": 76524
+    }
+  },
+  {
+    "rows": [
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i008",
+        "outstanding_cents": 5409
+      },
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i019",
+        "outstanding_cents": 17006
+      },
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i049",
+        "outstanding_cents": 10475
+      },
+      {
+        "currency": "GBP",
+        "customer": "alfa",
+        "invoice_id": "i048",
+        "outstanding_cents": 9205
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "edge",
+        "outstanding_cents": 30
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i011",
+        "outstanding_cents": 14940
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i028",
+        "outstanding_cents": 15099
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i033",
+        "outstanding_cents": 8526
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i043",
+        "outstanding_cents": 11919
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i047",
+        "outstanding_cents": 15040
+      }
+    ],
+    "totals": {
+      "EUR": 32890,
+      "GBP": 9205,
+      "USD": 65554
+    }
+  },
+  {
+    "rows": [
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i007",
+        "outstanding_cents": 6040
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "edge",
+        "outstanding_cents": 30
+      }
+    ],
+    "totals": {
+      "EUR": 6040,
+      "USD": 30
+    }
+  },
+  {
+    "rows": [
+      {
+        "currency": "EUR",
+        "customer": "alfa",
+        "invoice_id": "i014",
+        "outstanding_cents": 10615
+      },
+      {
+        "currency": "GBP",
+        "customer": "alfa",
+        "invoice_id": "i000",
+        "outstanding_cents": 5997
+      },
+      {
+        "currency": "GBP",
+        "customer": "alfa",
+        "invoice_id": "i005",
+        "outstanding_cents": 7728
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "edge",
+        "outstanding_cents": 30
+      },
+      {
+        "currency": "USD",
+        "customer": "alfa",
+        "invoice_id": "i015",
+        "outstanding_cents": 18224
+      },
+      {
+        "currency": "EUR",
+        "customer": "beta",
+        "invoice_id": "i010",
+        "outstanding_cents": 16334
+      },
+      {
+        "currency": "EUR",
+        "customer": "beta",
+        "invoice_id": "i011",
+        "outstanding_cents": 9529
+      },
+      {
+        "currency": "GBP",
+        "customer": "beta",
+        "invoice_id": "i006",
+        "outstanding_cents": 6425
+      },
+      {
+        "currency": "GBP",
+        "customer": "beta",
+        "invoice_id": "i007",
+        "outstanding_cents": 2790
+      },
+      {
+        "currency": "USD",
+        "customer": "beta",
+        "invoice_id": "i009",
+        "outstanding_cents": 10767
+      },
+      {
+        "currency": "EUR",
+        "customer": "gamma",
+        "invoice_id": "i002",
+        "outstanding_cents": 13407
+      },
+      {
+        "currency": "EUR",
+        "customer": "gamma",
+        "invoice_id": "i003",
+        "outstanding_cents": 19502
+      },
+      {
+        "currency": "EUR",
+        "customer": "gamma",
+        "invoice_id": "i008",
+        "outstanding_cents": 653
+      },
+      {
+        "currency": "EUR",
+        "customer": "gamma",
+        "invoice_id": "i016",
+        "outstanding_cents": 7566
+      },
+      {
+        "currency": "GBP",
+        "customer": "gamma",
+        "invoice_id": "i012",
+        "outstanding_cents": 5550
+      },
+      {
+        "currency": "USD",
+        "customer": "gamma",
+        "invoice_id": "i004",
+        "outstanding_cents": 8526
+      }
+    ],
+    "totals": {
+      "EUR": 77606,
+      "GBP": 28490,
+      "USD": 37547
+    }
+  },
+  {
+    "rows": [],
+    "totals": {}
+  },
+  {
+    "rows": [],
+    "totals": {}
+  }
+]

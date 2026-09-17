@@ -1,5 +1,12 @@
 # Retaining executable experience
 
+**Study completed, 17 September 2026.** See [REPORT.md](REPORT.md) for findings,
+[REPRODUCE.md](REPRODUCE.md) for reproduction, and [results](results/tables.md) for
+paired outcomes and costs. All four retention policies passed 8/8 fresh requests;
+ready source and archived source needed zero future model calls, lessons-only needed
+eight, and reconstruction with caching needed one. The commissioning brief below
+is preserved as the pre-experiment record.
+
 **Prepared and commissioned for bounded investigation, 17 September 2026.**
 No experiment or investigator session was started by preparation. Begin a fresh
 ancillary session with this file and [AGENTS.md](AGENTS.md). This study owns

@@ -39,5 +39,11 @@ single task family is dispatched by the harness; autonomous selection among many
 skills is outside this study. The environment is deterministic and read-only.
 
 For offline verification of original outputs, see `scripts/verify_evidence.py`
-when available. For model-free re-execution, see `scripts/replay.py`. Neither
+and `evidence/offline-verification.log`. For model-free re-execution, see
+`scripts/replay.py`. Neither
 requires inference or a network connection after the container image is present.
+
+Original evaluation used revision `3328619`; paper/model/container pins and later
+publication scripts are included in the final study revision. Run
+`uv run --python 3.12 python scripts/publish_accounting.py` to regenerate the
+original tabular accounting after `summarize`. This operates on original evidence.

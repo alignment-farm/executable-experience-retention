@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```python\ndef solve(api, request):\n    customers = set(request[\"customers\"])\n    cutoff = request[\"cutoff\"]\n\n    def fetch_all(resource):\n        items = []\n        cursor = None\n        while True:\n            page = api.page(resource, cursor)\n            items.extend(page[\"items\"])\n            cursor = page.get(\"next_cursor\")\n            if cursor is None:\n                break\n        return items\n\n    invoices = fetch_all(\"invoices\")\n    events = fetch_all(\"events\")\n\n    # Deduplicate events: for each event id, keep highest revision; identical duplicates count once\n    best = {}\n    for ev in events:\n        eid = ev[\"id\"]\n        rev = ev[\"revision\"]\n        if eid not in best:\n            best[eid] = ev\n        else:\n            cur = best[eid]\n            if rev > cur[\"revision\"]:\n                best[eid] = ev\n            elif rev == cur[\"revision\"]:\n                # identical duplicates; keep one (they are identical per spec)\n                pass\n    deduped = list(best.values())\n\n    # Filter events: posted, date <= cutoff\n    filtered_events = []\n    for ev in deduped:\n        if ev[\"status\"] != \"posted\":\n            continue\n        if ev[\"date\"] > cutoff:\n            continue\n        filtered_events.append(ev)\n\n    # Build set of valid invoice ids\n    invoice_ids = set(inv[\"id\"] for inv in invoices)\n\n    # Select invoices: open, customer in customers, due <= cutoff\n    selected = []\n    for inv in invoices:\n        if inv[\"status\"] != \"open\":\n            continue\n        if inv[\"customer\"] not in customers:\n            continue\n        if inv[\"due\"] > cutoff:\n            continue\n        selected.append(inv)\n\n    def to_cents(amount_str):\n        # amount_str is like \"123.45\"\n        parts = amount_str.split(\".\")\n        whole = int(parts[0])\n        frac = int(parts[1]) if len(parts) > 1 else 0\n        return whole * 100 + frac\n\n    # Group filtered events by invoice_id\n    events_by_invoice = {}\n    for ev in filtered_events:\n        iid = ev[\"invoice_id\"]\n        if iid not in invoice_ids:\n            continue\n        if iid not in events_by_invoice:\n            events_by_invoice[iid] = []\n        events_by_invoice[iid].append(ev)\n\n    rows = []\n    for inv in selected:\n        iid = inv[\"id\"]\n        currency = inv[\"currency\"]\n        balance = to_cents(inv[\"amount\"])\n        for ev in events_by_invoice.get(iid, []):\n            if ev[\"currency\"] != currency:\n                continue\n            amt = to_cents(ev[\"amount\"])\n            if ev[\"kind\"] == \"payment\":\n                balance -= amt\n            elif ev[\"kind\"] == \"refund\":\n                balance += amt\n        if balance < 0:\n            balance = 0\n        if balance > 0:\n            rows.append({\n                \"invoice_id\": iid,\n                \"customer\": inv[\"customer\"],\n                \"currency\": currency,\n                \"outstanding_cents\": balance\n            })\n\n    rows.sort(key=lambda r: (r[\"customer\"], r[\"currency\"], r[\"invoice_id\"]))\n\n    totals = {}\n    for r in rows:\n        cur = r[\"currency\"]\n        totals[cur] = totals.get(cur, 0) + r[\"outstanding_cents\"]\n\n    return {\"rows\": rows, \"totals\": totals}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789649223,
+  "id": "chatcmpl-eKVELbGa5UVk3OsqLa3qiViiRw4q7QcG",
+  "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+  "object": "chat.completion",
+  "system_fingerprint": "b1-72874f5",
+  "timings": {
+    "cache_n": 38,
+    "predicted_ms": 43237.967,
+    "predicted_n": 795,
+    "predicted_per_second": 18.38661840877024,
+    "predicted_per_token_ms": 54.387379874213835,
+    "prompt_ms": 38586.101,
+    "prompt_n": 7118,
+    "prompt_per_second": 184.47056881958608,
+    "prompt_per_token_ms": 5.420918937903906
+  },
+  "usage": {
+    "completion_tokens": 795,
+    "prompt_tokens": 7156,
+    "prompt_tokens_details": {
+      "cached_tokens": 38
+    },
+    "total_tokens": 7951
+  }
+}

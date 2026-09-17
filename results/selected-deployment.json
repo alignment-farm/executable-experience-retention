@@ -1,0 +1,26 @@
+{
+  "archive": {
+    "known_prompt_tokens": 6467,
+    "known_completion_tokens": 848,
+    "instrumented_wall_seconds": 83.40647795800123,
+    "api_calls": 753
+  },
+  "cache": {
+    "known_prompt_tokens": 22029,
+    "known_completion_tokens": 2893,
+    "instrumented_wall_seconds": 282.18336104300033,
+    "api_calls": 753
+  },
+  "lessons": {
+    "known_prompt_tokens": 72095,
+    "known_completion_tokens": 8574,
+    "instrumented_wall_seconds": 863.3964024150027,
+    "api_calls": 753
+  },
+  "ready": {
+    "known_prompt_tokens": 6467,
+    "known_completion_tokens": 848,
+    "instrumented_wall_seconds": 83.39032587599922,
+    "api_calls": 753
+  }
+}
