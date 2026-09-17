@@ -1,0 +1,7 @@
+[
+  {
+    "check_path": "evidence/checks/acquisition-compact-0.json",
+    "failures": [],
+    "source_path": "evidence/candidates/acquisition-compact-0.py"
+  }
+]

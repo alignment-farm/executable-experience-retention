@@ -29,3 +29,6 @@ secrets.json
 .agent/
 .claude/
 .DS_Store
+
+# Independent reproduction outputs
+reproductions/

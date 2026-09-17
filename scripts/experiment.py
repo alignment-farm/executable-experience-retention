@@ -181,7 +181,7 @@ def summarize():
         return {'candidate_check_batches':len(batches),
                 'candidate_check_api_calls':sum(len(x.get('api_calls',[])) for b in batches for x in b.get('results',[])),
                 'candidate_check_wall_seconds':sum(b['container_wall_seconds'] for b in batches)}
-    summary={'setup':costs([c for c in calls if c['name'].startswith(('acquisition-','lesson-construction'))]),'arms':{},'calls':calls}
+    summary={'setup':costs([c for c in calls if c['name'].startswith(('acquisition-','lesson-construction','lesson-repair'))]),'arms':{},'calls':calls}
     summary['setup'].update(check_costs(['acquisition-']))
     for arm in ['ready','lessons','archive','cache']:
         rs=[r for r in records if r['arm']==arm]

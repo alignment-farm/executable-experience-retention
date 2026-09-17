@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```python\ndef solve(api, request):\n    customers = set(request.get(\"customers\", []))\n    cutoff = request.get(\"cutoff\", \"\")\n    \n    # Fetch all invoices\n    invoices = []\n    cursor = None\n    while True:\n        page = api.page(\"invoices\", cursor)\n        invoices.extend(page[\"items\"])\n        cursor = page.get(\"next_cursor\")\n        if cursor is None:\n            break\n    \n    # Fetch all events\n    events = []\n    cursor = None\n    while True:\n        page = api.page(\"events\", cursor)\n        events.extend(page[\"items\"])\n        cursor = page.get(\"next_cursor\")\n        if cursor is None:\n            break\n    \n    # Deduplicate events: for each event ID, keep only the highest revision\n    # If multiple events have the same ID and same highest revision, count once\n    best_by_id = {}\n    for ev in events:\n        eid = ev[\"id\"]\n        rev = ev[\"revision\"]\n        if eid not in best_by_id or rev > best_by_id[eid][\"revision\"]:\n            best_by_id[eid] = ev\n        elif rev == best_by_id[eid][\"revision\"]:\n            # Identical duplicates; keep one (they're identical per problem statement)\n            pass\n    \n    # Now filter: only posted, date <= cutoff\n    valid_events = []\n    for eid, ev in best_by_id.items():\n        if ev[\"status\"] == \"posted\" and ev[\"date\"] <= cutoff:\n            valid_events.append(ev)\n    \n    # Build invoice lookup\n    invoice_map = {}\n    for inv in invoices:\n        invoice_map[inv[\"id\"]] = inv\n    \n    # Select open invoices for requested customers with due <= cutoff\n    selected_invoices = []\n    for inv in invoices:\n        if inv[\"status\"] == \"open\" and inv[\"customer\"] in customers and inv[\"due\"] <= cutoff:\n            selected_invoices.append(inv)\n    \n    # Helper: convert decimal string to integer cents\n    def to_cents(amount_str):\n        # amount_str is like \"123.45\"\n        if \".\" in amount_str:\n            whole, frac = amount_str.split(\".\")\n            # frac should be exactly 2 digits\n            return int(whole) * 100 + int(frac)\n        else:\n            return int(amount_str) * 100\n    \n    # For each selected invoice, compute outstanding balance\n    rows = []\n    for inv in selected_invoices:\n        inv_id = inv[\"id\"]\n        inv_currency = inv[\"currency\"]\n        balance = to_cents(inv[\"amount\"])\n        \n        # Apply valid events for this invoice\n        for ev in valid_events:\n            if ev[\"invoice_id\"] != inv_id:\n                continue\n            if ev[\"currency\"] != inv_currency:\n                continue\n            amt = to_cents(ev[\"amount\"])\n            if ev[\"kind\"] == \"payment\":\n                balance -= amt\n            elif ev[\"kind\"] == \"refund\":\n                balance += amt\n        \n        # Clamp to zero\n        if balance < 0:\n            balance = 0\n        \n        # Include only positive balances\n        if balance > 0:\n            rows.append({\n                \"invoice_id\": inv_id,\n                \"customer\": inv[\"customer\"],\n                \"currency\": inv_currency,\n                \"outstanding_cents\": balance\n            })\n    \n    # Sort rows by (customer, currency, invoice_id)\n    rows.sort(key=lambda r: (r[\"customer\"], r[\"currency\"], r[\"invoice_id\"]))\n    \n    # Compute totals\n    totals = {}\n    for r in rows:\n        cur = r[\"currency\"]\n        totals[cur] = totals.get(cur, 0) + r[\"outstanding_cents\"]\n    \n    return {\"rows\": rows, \"totals\": totals}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789648462,
+  "id": "chatcmpl-9Czfh2qKlTMQFX9ATCFyYhEkzYl5YHVB",
+  "model": "/Users/macos-user/.docker/models/bundles/sha256/f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef/model/Qwen3.8-27B-UD-Q4_K_M.gguf",
+  "object": "chat.completion",
+  "system_fingerprint": "b1-72874f5",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 46030.793,
+    "predicted_n": 848,
+    "predicted_per_second": 18.42245038011837,
+    "predicted_per_token_ms": 54.281595518867924,
+    "prompt_ms": 35086.916,
+    "prompt_n": 6467,
+    "prompt_per_second": 184.31371967829833,
+    "prompt_per_token_ms": 5.425532085974949
+  },
+  "usage": {
+    "completion_tokens": 848,
+    "prompt_tokens": 6467,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7315
+  }
+}

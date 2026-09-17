@@ -1,0 +1,60 @@
+{
+  "execution": {
+    "container_wall_seconds": 0.26344637500005774,
+    "results": [
+      {
+        "api_calls": [
+          {
+            "cursor": null,
+            "items": 1,
+            "resource": "invoices"
+          },
+          {
+            "cursor": null,
+            "items": 0,
+            "resource": "events"
+          }
+        ],
+        "output": {
+          "rows": [
+            {
+              "currency": "USD",
+              "customer": "alfa",
+              "invoice_id": "unpaid",
+              "outstanding_cents": 1234
+            }
+          ],
+          "totals": {
+            "USD": 1234
+          }
+        },
+        "seconds": 3.3333000004631685e-05
+      }
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  "failures": [],
+  "input": {
+    "data": {
+      "events": [],
+      "invoices": [
+        {
+          "amount": "12.34",
+          "currency": "USD",
+          "customer": "alfa",
+          "due": "2026-09-01",
+          "id": "unpaid",
+          "status": "open"
+        }
+      ]
+    },
+    "page_size": 3,
+    "request": {
+      "customers": [
+        "alfa"
+      ],
+      "cutoff": "2026-09-17"
+    }
+  }
+}
