@@ -1,0 +1,10 @@
+{
+    "id": "sha256:f04d0a543b642a6f0d06590973b124bc4e8700ddf7e99b669ec6c4ab1ef561ef",
+    "tags": [
+        "docker.io/ai/qwen3.8:27b-q4_K_M"
+    ],
+    "created": 0,
+    "config": {
+        "format": "gguf"
+    }
+}

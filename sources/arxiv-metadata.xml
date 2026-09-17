@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/4QjzjcwngfdIHzJxoBlhH/eRtrY</id>
+  <title>arXiv Query: search_query=&amp;id_list=2603.00718v2,2507.22069v2&amp;start=0&amp;max_results=10</title>
+  <updated>2026-09-17T12:25:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2603.00718v2,2507.22069v2" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.00718v2</id>
+    <title>SkillCraft: Can LLM Agents Learn to Use Tools Skillfully?</title>
+    <updated>2026-03-10T08:57:18Z</updated>
+    <link href="https://arxiv.org/abs/2603.00718v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.00718v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Real-world tool-using agents operate over long-horizon workflows with recurring structure and diverse demands, where effective behavior requires not only invoking atomic tools but also abstracting, and reusing higher-level tool compositions. However, existing benchmarks mainly measure instance-level success under static tool sets, offering limited insight into agents' ability to acquire such reusable skills. We address this gap by introducing SkillCraft, a benchmark explicitly stress-test agent ability to form and reuse higher-level tool compositions, where we call Skills. SkillCraft features realistic, highly compositional tool-use scenarios with difficulty scaled along both quantitative and structural dimensions, designed to elicit skill abstraction and cross-task reuse. We further propose a lightweight evaluation protocol that enables agents to auto-compose atomic tools into executable Skills, cache and reuse them inside and across tasks, thereby improving efficiency while accumulating a persistent library of reusable skills. Evaluating state-of-the-art agents on SkillCraft, we observe substantial efficiency gains, with token usage reduced by up to 80% by skill saving and reuse. Moreover, success rate strongly correlates with tool composition ability at test time, underscoring compositional skill acquisition as a core capability.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-28T15:44:31Z</published>
+    <arxiv:comment>21 pages. Code: https://github.com/shiqichen17/SkillCraft ; Project page: https://skillcraft-website.github.io/page</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shiqi Chen</name>
+    </author>
+    <author>
+      <name>Jingze Gai</name>
+    </author>
+    <author>
+      <name>Ruochen Zhou</name>
+    </author>
+    <author>
+      <name>Jinghan Zhang</name>
+    </author>
+    <author>
+      <name>Tongyao Zhu</name>
+    </author>
+    <author>
+      <name>Junlong Li</name>
+    </author>
+    <author>
+      <name>Kangrui Wang</name>
+    </author>
+    <author>
+      <name>Zihan Wang</name>
+    </author>
+    <author>
+      <name>Zhengyu Chen</name>
+    </author>
+    <author>
+      <name>Klara Kaleb</name>
+    </author>
+    <author>
+      <name>Ning Miao</name>
+    </author>
+    <author>
+      <name>Siyang Gao</name>
+    </author>
+    <author>
+      <name>Cong Lu</name>
+    </author>
+    <author>
+      <name>Manling Li</name>
+    </author>
+    <author>
+      <name>Junxian He</name>
+    </author>
+    <author>
+      <name>Yee Whye Teh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.22069v2</id>
+    <title>A Compute-Matched Re-Evaluation of TroVE on MATH</title>
+    <updated>2025-07-31T07:33:11Z</updated>
+    <link href="https://arxiv.org/abs/2507.22069v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.22069v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Reusing established theorems and formulas is central to mathematical problem solving, serving as essential building blocks for tackling increasingly complex challenges. Recent work, TroVE, argues that code-generating Large Language Models (LLMs) can benefit similarly on the MATH benchmark by inducing and reusing higher-level toolboxes. By allocating computational budget across an ensemble of three modes -- directly generating code, creating tools, and reusing tools -- TroVE claims to outperform a PRIMITIVE baseline that only performs direct generation. However, recent analysis (Berlot-Attwell et al., 2024) casts doubt on these gains, noting that the tools created are often trivial or rarely reused, suggesting that improvements may stem from self-consistency or self-correction. In this work, we re-evaluate TroVE on MATH, analyze the impact of each of its modes, and show that its benefit does not come from these mechanisms, but simply from a higher computational budget spent for TroVE compared to PRIMITIVE. To this end, we also perform a small correction in the original implementation of TroVE's selection mechanism, boosting TroVE's performance on MATH by 3\% in accuracy. After matching for compute, the benefit of TroVE reduces to a marginal improvement of 1\%, suggesting that this toolbox approach does not provide a significant benefit on MATH.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-16T03:11:43Z</published>
+    <arxiv:primary_category term="cs.PL"/>
+    <arxiv:journal_ref>2nd AI for Math Workshop at ICML 2025</arxiv:journal_ref>
+    <author>
+      <name>Tobias Sesterhenn</name>
+    </author>
+    <author>
+      <name>Ian Berlot-Attwell</name>
+    </author>
+    <author>
+      <name>Janis Zenkner</name>
+    </author>
+    <author>
+      <name>Christian Bartelt</name>
+    </author>
+  </entry>
+</feed>
