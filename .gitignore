@@ -1,0 +1,31 @@
+# Environments and dependencies
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+
+# Downloads and disposable caches; keep research evidence elsewhere
+.cache/
+models/
+downloads/
+tmp/
+
+# Credentials and local agent state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+.codex/
+.agent/
+.claude/
+.DS_Store
