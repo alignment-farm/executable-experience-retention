@@ -1,0 +1,972 @@
+[
+  {
+    "expected": {
+      "rows": [
+        {
+          "currency": "GBP",
+          "customer": "alfa",
+          "invoice_id": "i002",
+          "outstanding_cents": 13234
+        },
+        {
+          "currency": "USD",
+          "customer": "alfa",
+          "invoice_id": "edge",
+          "outstanding_cents": 30
+        },
+        {
+          "currency": "USD",
+          "customer": "gamma",
+          "invoice_id": "i000",
+          "outstanding_cents": 17669
+        }
+      ],
+      "totals": {
+        "GBP": 13234,
+        "USD": 17699
+      }
+    },
+    "input": {
+      "data": {
+        "events": [
+          {
+            "amount": "0.20",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "2.00",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "orphan",
+            "invoice_id": "absent",
+            "kind": "refund",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "126.13",
+            "currency": "GBP",
+            "date": "2026-09-16",
+            "id": "e001-1",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "14.55",
+            "currency": "GBP",
+            "date": "2026-09-06",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "0.10",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "113.44",
+            "currency": "GBP",
+            "date": "2026-09-15",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "14.55",
+            "currency": "GBP",
+            "date": "2026-09-06",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          }
+        ],
+        "invoices": [
+          {
+            "amount": "176.69",
+            "currency": "USD",
+            "customer": "gamma",
+            "due": "2026-09-12",
+            "id": "i000",
+            "status": "open"
+          },
+          {
+            "amount": "132.34",
+            "currency": "GBP",
+            "customer": "alfa",
+            "due": "2026-09-14",
+            "id": "i002",
+            "status": "open"
+          },
+          {
+            "amount": "70.29",
+            "currency": "GBP",
+            "customer": "gamma",
+            "due": "2026-09-20",
+            "id": "i001",
+            "status": "open"
+          },
+          {
+            "amount": "0.30",
+            "currency": "USD",
+            "customer": "alfa",
+            "due": "2026-09-01",
+            "id": "edge",
+            "status": "open"
+          }
+        ]
+      },
+      "page_size": 1,
+      "request": {
+        "customers": [
+          "alfa",
+          "beta",
+          "gamma"
+        ],
+        "cutoff": "2026-09-28"
+      },
+      "seed": 101
+    }
+  },
+  {
+    "expected": {
+      "rows": [
+        {
+          "currency": "USD",
+          "customer": "alfa",
+          "invoice_id": "edge",
+          "outstanding_cents": 30
+        }
+      ],
+      "totals": {
+        "USD": 30
+      }
+    },
+    "input": {
+      "data": {
+        "events": [
+          {
+            "amount": "33.97",
+            "currency": "JPY",
+            "date": "2026-09-12",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "refund",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "24.60",
+            "currency": "USD",
+            "date": "2026-09-09",
+            "id": "e003-0",
+            "invoice_id": "i003",
+            "kind": "refund",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "24.60",
+            "currency": "USD",
+            "date": "2026-09-09",
+            "id": "e003-0",
+            "invoice_id": "i003",
+            "kind": "refund",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "50.35",
+            "currency": "GBP",
+            "date": "2026-09-24",
+            "id": "e002-2",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "0.10",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "86.85",
+            "currency": "JPY",
+            "date": "2026-09-15",
+            "id": "e000-1",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "72.94",
+            "currency": "USD",
+            "date": "2026-09-24",
+            "id": "e003-1",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "33.97",
+            "currency": "JPY",
+            "date": "2026-09-12",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "refund",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "96.47",
+            "currency": "GBP",
+            "date": "2026-09-14",
+            "id": "e001-1",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "51.57",
+            "currency": "GBP",
+            "date": "2026-09-07",
+            "id": "e002-2",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "132.74",
+            "currency": "JPY",
+            "date": "2026-09-03",
+            "id": "e000-1",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "19.47",
+            "currency": "USD",
+            "date": "2026-09-14",
+            "id": "e003-1",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "125.70",
+            "currency": "GBP",
+            "date": "2026-09-22",
+            "id": "e001-1",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "86.44",
+            "currency": "GBP",
+            "date": "2026-09-04",
+            "id": "e002-1",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "62.96",
+            "currency": "GBP",
+            "date": "2026-09-19",
+            "id": "e000-0",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "113.01",
+            "currency": "GBP",
+            "date": "2026-09-17",
+            "id": "e000-2",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "121.73",
+            "currency": "GBP",
+            "date": "2026-09-18",
+            "id": "e002-0",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "125.70",
+            "currency": "GBP",
+            "date": "2026-09-22",
+            "id": "e001-1",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "86.90",
+            "currency": "JPY",
+            "date": "2026-09-20",
+            "id": "e000-3",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "132.74",
+            "currency": "JPY",
+            "date": "2026-09-03",
+            "id": "e000-1",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "31.86",
+            "currency": "JPY",
+            "date": "2026-09-27",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "refund",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "11.22",
+            "currency": "JPY",
+            "date": "2026-09-22",
+            "id": "e000-3",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "23.41",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "e003-0",
+            "invoice_id": "i003",
+            "kind": "refund",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "11.22",
+            "currency": "JPY",
+            "date": "2026-09-22",
+            "id": "e000-3",
+            "invoice_id": "i000",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "51.57",
+            "currency": "GBP",
+            "date": "2026-09-07",
+            "id": "e002-2",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "135.17",
+            "currency": "GBP",
+            "date": "2026-09-21",
+            "id": "e001-2",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "0.20",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "121.69",
+            "currency": "USD",
+            "date": "2026-09-07",
+            "id": "e003-2",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "2.00",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "orphan",
+            "invoice_id": "absent",
+            "kind": "refund",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "72.94",
+            "currency": "USD",
+            "date": "2026-09-24",
+            "id": "e003-1",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          }
+        ],
+        "invoices": [
+          {
+            "amount": "167.58",
+            "currency": "GBP",
+            "customer": "beta",
+            "due": "2026-09-22",
+            "id": "i002",
+            "status": "open"
+          },
+          {
+            "amount": "51.38",
+            "currency": "USD",
+            "customer": "beta",
+            "due": "2026-09-08",
+            "id": "i003",
+            "status": "void"
+          },
+          {
+            "amount": "0.30",
+            "currency": "USD",
+            "customer": "alfa",
+            "due": "2026-09-01",
+            "id": "edge",
+            "status": "open"
+          },
+          {
+            "amount": "117.38",
+            "currency": "GBP",
+            "customer": "alfa",
+            "due": "2026-09-06",
+            "id": "i000",
+            "status": "void"
+          },
+          {
+            "amount": "30.14",
+            "currency": "GBP",
+            "customer": "alfa",
+            "due": "2026-09-27",
+            "id": "i001",
+            "status": "open"
+          }
+        ]
+      },
+      "page_size": 7,
+      "request": {
+        "customers": [
+          "alfa",
+          "beta",
+          "gamma"
+        ],
+        "cutoff": "2026-09-22"
+      },
+      "seed": 102
+    }
+  },
+  {
+    "expected": {
+      "rows": [],
+      "totals": {}
+    },
+    "input": {
+      "data": {
+        "events": [],
+        "invoices": []
+      },
+      "page_size": 7,
+      "request": {
+        "customers": [
+          "alfa",
+          "beta",
+          "gamma"
+        ],
+        "cutoff": "2026-09-15"
+      },
+      "seed": 103
+    }
+  },
+  {
+    "expected": {
+      "rows": [
+        {
+          "currency": "USD",
+          "customer": "alfa",
+          "invoice_id": "edge",
+          "outstanding_cents": 30
+        },
+        {
+          "currency": "USD",
+          "customer": "alfa",
+          "invoice_id": "i000",
+          "outstanding_cents": 7458
+        },
+        {
+          "currency": "USD",
+          "customer": "gamma",
+          "invoice_id": "i001",
+          "outstanding_cents": 547
+        }
+      ],
+      "totals": {
+        "USD": 8035
+      }
+    },
+    "input": {
+      "data": {
+        "events": [
+          {
+            "amount": "135.67",
+            "currency": "EUR",
+            "date": "2026-09-18",
+            "id": "e002-2",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "6.40",
+            "currency": "EUR",
+            "date": "2026-09-20",
+            "id": "e002-1",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "11.76",
+            "currency": "USD",
+            "date": "2026-09-27",
+            "id": "e003-2",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "103.66",
+            "currency": "USD",
+            "date": "2026-09-05",
+            "id": "e003-0",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "10.18",
+            "currency": "USD",
+            "date": "2026-09-03",
+            "id": "e003-1",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "0.20",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "5.17",
+            "currency": "USD",
+            "date": "2026-09-06",
+            "id": "e003-1",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "11.84",
+            "currency": "USD",
+            "date": "2026-09-21",
+            "id": "e003-3",
+            "invoice_id": "i003",
+            "kind": "refund",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "2.00",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "orphan",
+            "invoice_id": "absent",
+            "kind": "refund",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "12.50",
+            "currency": "USD",
+            "date": "2026-09-21",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "42.09",
+            "currency": "USD",
+            "date": "2026-09-19",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "88.15",
+            "currency": "USD",
+            "date": "2026-09-02",
+            "id": "e003-0",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "120.20",
+            "currency": "JPY",
+            "date": "2026-09-09",
+            "id": "e004-1",
+            "invoice_id": "i004",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "10.18",
+            "currency": "USD",
+            "date": "2026-09-03",
+            "id": "e003-1",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "138.05",
+            "currency": "GBP",
+            "date": "2026-09-17",
+            "id": "e004-0",
+            "invoice_id": "i004",
+            "kind": "payment",
+            "revision": 1,
+            "status": "pending"
+          },
+          {
+            "amount": "76.40",
+            "currency": "EUR",
+            "date": "2026-09-09",
+            "id": "e002-0",
+            "invoice_id": "i002",
+            "kind": "refund",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "88.15",
+            "currency": "USD",
+            "date": "2026-09-02",
+            "id": "e003-0",
+            "invoice_id": "i003",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "42.09",
+            "currency": "USD",
+            "date": "2026-09-19",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "102.09",
+            "currency": "EUR",
+            "date": "2026-09-12",
+            "id": "e002-2",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "0.10",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "102.09",
+            "currency": "EUR",
+            "date": "2026-09-12",
+            "id": "e002-2",
+            "invoice_id": "i002",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          }
+        ],
+        "invoices": [
+          {
+            "amount": "0.30",
+            "currency": "USD",
+            "customer": "alfa",
+            "due": "2026-09-01",
+            "id": "edge",
+            "status": "open"
+          },
+          {
+            "amount": "56.21",
+            "currency": "EUR",
+            "customer": "beta",
+            "due": "2026-09-21",
+            "id": "i002",
+            "status": "open"
+          },
+          {
+            "amount": "74.58",
+            "currency": "USD",
+            "customer": "alfa",
+            "due": "2026-09-13",
+            "id": "i000",
+            "status": "open"
+          },
+          {
+            "amount": "61.61",
+            "currency": "GBP",
+            "customer": "beta",
+            "due": "2026-09-24",
+            "id": "i004",
+            "status": "open"
+          },
+          {
+            "amount": "31.01",
+            "currency": "USD",
+            "customer": "gamma",
+            "due": "2026-09-02",
+            "id": "i003",
+            "status": "open"
+          },
+          {
+            "amount": "5.47",
+            "currency": "USD",
+            "customer": "gamma",
+            "due": "2026-09-06",
+            "id": "i001",
+            "status": "open"
+          }
+        ]
+      },
+      "page_size": 1,
+      "request": {
+        "customers": [
+          "alfa",
+          "beta",
+          "gamma"
+        ],
+        "cutoff": "2026-09-15"
+      },
+      "seed": 104
+    }
+  },
+  {
+    "expected": {
+      "rows": [
+        {
+          "currency": "USD",
+          "customer": "alfa",
+          "invoice_id": "edge",
+          "outstanding_cents": 30
+        },
+        {
+          "currency": "GBP",
+          "customer": "beta",
+          "invoice_id": "i001",
+          "outstanding_cents": 18693
+        }
+      ],
+      "totals": {
+        "GBP": 18693,
+        "USD": 30
+      }
+    },
+    "input": {
+      "data": {
+        "events": [
+          {
+            "amount": "0.20",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 2,
+            "status": "pending"
+          },
+          {
+            "amount": "27.14",
+            "currency": "GBP",
+            "date": "2026-09-22",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "70.47",
+            "currency": "GBP",
+            "date": "2026-09-28",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "70.47",
+            "currency": "GBP",
+            "date": "2026-09-28",
+            "id": "e001-0",
+            "invoice_id": "i001",
+            "kind": "payment",
+            "revision": 2,
+            "status": "posted"
+          },
+          {
+            "amount": "2.00",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "orphan",
+            "invoice_id": "absent",
+            "kind": "refund",
+            "revision": 1,
+            "status": "posted"
+          },
+          {
+            "amount": "0.10",
+            "currency": "USD",
+            "date": "2026-09-01",
+            "id": "edgepay",
+            "invoice_id": "edge",
+            "kind": "payment",
+            "revision": 1,
+            "status": "posted"
+          }
+        ],
+        "invoices": [
+          {
+            "amount": "190.29",
+            "currency": "EUR",
+            "customer": "gamma",
+            "due": "2026-09-26",
+            "id": "i000",
+            "status": "open"
+          },
+          {
+            "amount": "186.93",
+            "currency": "GBP",
+            "customer": "beta",
+            "due": "2026-09-11",
+            "id": "i001",
+            "status": "open"
+          },
+          {
+            "amount": "0.30",
+            "currency": "USD",
+            "customer": "alfa",
+            "due": "2026-09-01",
+            "id": "edge",
+            "status": "open"
+          }
+        ]
+      },
+      "page_size": 1,
+      "request": {
+        "customers": [
+          "alfa",
+          "beta",
+          "gamma"
+        ],
+        "cutoff": "2026-09-22"
+      },
+      "seed": 105
+    }
+  }
+]
